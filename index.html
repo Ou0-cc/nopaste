@@ -41,12 +41,13 @@ npm/microtip@0.2.2/microtip.min.css
         <div id="copy" class="container-fluid hidden shadow-bottom hide-readonly">
             <div class="row my-1">
                 <div class="col my-1">
-                    <input type="text" value="copy me" id="copy-link" class="px-2" onclick="this.setSelectionRange(0, this.value.length)" />
+                    <input type="text" value="copy me" id="copy-link" class="px-2" onclick="this.setSelectionRange(0, this.value.length)" readonly/>
                 </div>
                 <div class="col-auto my-1">
                     <button class="clipboard py-1 px-2 mx-1" id="copy-btn" data-clipboard-target="#copy-link" type="button">
                         Copy
                     </button>
+                    <button class="py-1 px-2 mx-1" onclick="shortLink()" type="button">Shorten</button>
                     <button class="py-1 px-2 mx-1" onclick="hideCopyBar(false)" type="button">Cancel</button>
                 </div>
             </div>
@@ -66,7 +67,7 @@ npm/microtip@0.2.2/microtip.min.css
                         data-micromodal-trigger="description-modal"
                         >About</a
                     >
-                    <a href="https://github.com/bokub/nopaste" rel="noopener" target="_blank" class="mx-3">Source</a>
+                    <a href="https://github.com/JMcrafter26/nopaste" rel="noopener" target="_blank" class="mx-3">Fork</a>
                 </div>
                 <div class="col"></div>
                 <div class="col-auto my-1">
@@ -139,15 +140,15 @@ npm/microtip@0.2.2/microtip.min.css
                     👁️ The server hosting NoPaste (or any clone of it) <span class="pink">cannot read or access</span> your data<br />
                     ⏳ Your data will be accessible <span class="pink">forever</span> (as long as you have the link)<br />
                     🔀 You can access your data on <span class="pink">every NoPaste clone</span>, including
-                    <a href="https://github.com/bokub/nopaste/wiki/Deploy-your-own-version-of-NoPaste" rel="noopener" target="_blank"
+                    <a href="https://github.com/JMcrafter26/nopaste/wiki/Deploy-your-own-version-of-NoPaste" rel="noopener" target="_blank"
                         >your own</a
                     ><br />
                     🔍 Google <span class="pink">will not index</span> your data, even if your link is public<br />
                     <br />
                     If you want to know more, you can find more information on
-                    <a href="https://github.com/bokub/nopaste" rel="noopener" target="_blank" class="pink">GitHub</a>
+                    <a href="https://github.com/JMcrafter26/nopaste" rel="noopener" target="_blank" class="pink">GitHub</a>
                     <div class="additional-info">
-                        Note: NoPaste is an improved version of Topaz's
+                        Note: NoPaste is a fork of <a href="https://github.com/bokub/nopaste" rel="noopener" target="_blank">bokub's NoPaste</a>, which itself was based on Topaz's
                         <a href="https://topaz.github.io/paste" rel="noopener" target="_blank">Paste</a>
                     </div>
                 </div>

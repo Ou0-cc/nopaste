@@ -172,6 +172,23 @@ const buildUrl = (rawData, mode) => {
     return url;
 };
 
+// Shorten the generated link using the is.gd API
+const shortLink = () => {
+    const url = document.getElementById('copy-link').value;
+    if (url.length === 0 || url.startsWith('http') === false) {
+        alert('No URL to shorten');
+        return;
+    }
+    fetch(`https://is.gd/create.php?format=simple&url=${encodeURIComponent(url)}`)
+        .then((response) => response.text())
+        .then((shortUrl) => {
+            showCopyBar(shortUrl);
+        })
+        .catch(() => {
+            alert('Failed to shorten the URL');
+        });
+};
+
 // Transform a compressed base64 string into a plain text string
 const decompress = (base64, cb) => {
     const progressBar = byId('progress');

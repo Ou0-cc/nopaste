@@ -31,6 +31,12 @@ For example, [this is the CSS code used by NoPaste][example]
 
 ## Other features
 
+### Link shortening
+
+If your link is too long, you can click on the _Shorten_ button to get a shorter version of it. This shorter version will redirect to the original link, so it will work even if the original link is too long for some platforms (Twitter, Reddit...)
+
+> Uses [is.gd](https://is.gd/) as a URL shortener, which is free and does not require an API key
+
 ### Embedded NoPaste snippets
 
 You can include NoPaste code snippets into your own website by clicking the _Embed_ button and using the generated HTML code.
